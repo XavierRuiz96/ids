@@ -33,7 +33,7 @@ public class LanguageServiceImpl implements  LanguageService{
             Language language1=languageRepository.findById(language.getIdLanguage()).get();
             language1.setName(language.getName());
             language1.setCode(language.getCode());
-            language1.setEmployee(language.getEmployee());
+
             languageRepository.save(language);
         }catch (NullPointerException ex){
             System.out.println("Error en update language");

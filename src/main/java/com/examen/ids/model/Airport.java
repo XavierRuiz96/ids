@@ -11,9 +11,6 @@ public class Airport {
     private Integer idAirport;
     @Column(name="name")
     private String name;
-    @ManyToOne
-    @JoinColumn(name = "id_country")
-    private Country country;
 
     public Integer getIdAirport() {
         return idAirport;
@@ -31,12 +28,6 @@ public class Airport {
         this.name = name;
     }
 
-    public Country getCountry() {
-        return country;
-    }
 
-    public void setCountry(Country country) {
-        this.country = country;
-    }
 }
 

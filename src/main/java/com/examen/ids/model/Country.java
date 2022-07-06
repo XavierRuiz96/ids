@@ -14,10 +14,7 @@ public class Country {
     private int code;
     @Column(name="name")
     private String name;
-    @OneToMany(mappedBy = "country")
-    private List<Airport> airports;
-    @OneToMany(mappedBy = "country")
-    private List<Employee> employees;
+
 
     public Integer getIdCountry() {
         return idCountry;
@@ -43,19 +40,7 @@ public class Country {
         this.name = name;
     }
 
-    public List<Airport> getAirports() {
-        return airports;
-    }
 
-    public void setAirports(List<Airport> airports) {
-        this.airports = airports;
-    }
 
-    public List<Employee> getEmployees() {
-        return employees;
-    }
 
-    public void setEmployees(List<Employee> employees) {
-        this.employees = employees;
-    }
 }

@@ -15,12 +15,8 @@ public class Employee {
     @Column(name="firstName")
     private String firstName;
 
-    @ManyToOne
-    @JoinColumn(name = "id_country")
-    private Country country;
 
-    @OneToMany(mappedBy = "employee")
-    private List<Language> languages;
+
 
     public Integer getIdEmployee() {
         return idEmployee;
@@ -46,19 +42,7 @@ public class Employee {
         this.firstName = firstName;
     }
 
-    public Country getCountry() {
-        return country;
-    }
 
-    public void setCountry(Country country) {
-        this.country = country;
-    }
 
-    public List<Language> getLanguages() {
-        return languages;
-    }
 
-    public void setLanguages(List<Language> languages) {
-        this.languages = languages;
-    }
 }

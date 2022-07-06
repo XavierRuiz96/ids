@@ -15,9 +15,7 @@ public class Language {
     @Column(name="name")
     private String name;
 
-    @ManyToOne
-    @JoinColumn(name = "id_employee")
-    private Employee employee;
+
 
     public Integer getIdLanguage() {
         return idLanguage;
@@ -43,11 +41,5 @@ public class Language {
         this.name = name;
     }
 
-    public Employee getEmployee() {
-        return employee;
-    }
 
-    public void setEmployee(Employee employee) {
-        this.employee = employee;
-    }
 }
